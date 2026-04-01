@@ -25,13 +25,51 @@
   },
   "age": {
     "Description": "Participant age",
-    "Units": "years"
+    "Units": "years",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:Age",
+        "Label": "Age"
+      },
+      "VariableType": "Continuous",
+      "Format": {
+        "TermURL": "nb:FromFloat",
+        "Label": "float"
+      },
+      "MissingValues": [
+        "n/a",
+        "N/A",
+        "na",
+        "NA",
+        "nan",
+        "NaN",
+        ""
+      ]
+    }
   },
   "gender": {
     "Description": "Gender of participant",
     "Levels": {
       "F": "female",
       "M": "male"
+    },
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:Sex",
+        "Label": "Sex"
+      },
+      "VariableType": "Categorical",
+      "Levels": {
+        "F": {
+          "TermURL": "snomed:248152002",
+          "Label": "Female"
+        },
+        "M": {
+          "TermURL": "snomed:248153007",
+          "Label": "Male"
+        }
+      },
+      "MissingValues": []
     }
   },
   "cogPhenotype": {
@@ -87,32 +125,45 @@
     "Description": "Included in cognition group comparisons",
     "Units": "logical"
   },
-    "rs_analysis_fc_conition": {
+  "rs_analysis_fc_conition": {
     "Description": "Included analysis of functional connectivity",
     "Units": "logical"
   },
-    "task_fmri_vw": {
+  "task_fmri_vw": {
     "Description": "Included voxel-wise fmri task",
     "Units": "logical"
   },
-    "task.fmri_cognition": {
+  "task.fmri_cognition": {
     "Description": "Included in correlations between cognition and fmri task",
     "Units": "logical"
   },
-    "years.onset": {
+  "years.onset": {
     "Description": "Age at onset of disease",
     "Units": "years"
   },
-    "Treatments": {
+  "Treatments": {
     "Description": "Antiseizure medications used (currently and in the recent past)",
     "Units": "n/a"
   },
-    "L.hipp Volume": {
+  "L.hipp Volume": {
     "Description": "Volume of left hippocampus)",
     "Units": "Percent of intracranial volume"
   },
-    "R.hipp Volume": {
+  "R.hipp Volume": {
     "Description": "Volume of right hippocampus)",
     "Units": "Percent of intracranial volume"
+  },
+  "participant_id": {
+    "Description": "",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:ParticipantID",
+        "Label": "Participant ID"
+      },
+      "VariableType": "Identifier"
+    }
+  },
+  "Treatements": {
+    "Description": ""
   }
 }
